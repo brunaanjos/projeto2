@@ -1,177 +1,178 @@
 <script setup>
 import { ref } from 'vue'
 
-const produtos_mari = ref([
+const leninprodutos = ref([
   {
     id: 1,
-    nome: 'GingerGlow - Nude',
+    nome: 'Livro Lênin',
     preco: 85.0,
     quantidade: 0,
-    imagem: 'https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwe3713136/images/Color%20BR/mari-maria/Ginger/Paletas/7896032681798_2.jpg?sw=400&sh=400&sm=fit'
+    imagem: 'https://ecoms1.com/51315/imgs/big/@v3/1682002613642-lenin01.jpg.avif'
   },
   {
     id: 2,
-    nome: 'Base - CoverUp',
-    preco: 40.0,
+    nome: 'Azulejo Lenin URSS',
+    preco: 50.0,
     quantidade: 0,
-    imagem: 'https://tdc0tj.vtexassets.com/arquivos/ids/178368/7896032688391-Base-Liquida-Mari-Maria-Makeup-Cover-Up-MM011--2-.jpg?v=638113104831030000'
+    imagem: 'https://ecoms1-nyc3.nyc3.cdn.digitaloceanspaces.com/51315/imgs/big/@v3/1678738823446-azulejo03.jpg.webp'
   },
   {
     id: 3,
-    nome: 'GingerGlow - Color',
-    preco: 85.0,
+    nome: 'Estatueta Busto Lenin ',
+    preco: 195.0,
     quantidade: 0,
-    imagem: 'https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dw9bc24061/images/Color%20BR/mari-maria/Ginger/Paletas/7896032678132_2.jpg?sw=1200&sh=1200&sm=fit'
+    imagem: 'https://ecoms1.com/51315/imgs/big/@v3/1679491367474-lenin1_01.jpg.avif'
   }
+  
 ])
 function incrementar1(id) {
-  console.log(produtos_mari.value[id])
-  produtos_mari.value[id - 1].quantidade++
+  console.log(leninprodutos.value[id])
+  leninprodutos.value[id - 1].quantidade++
 }
 function decrementar1(id) {
-  if (produtos_mari.value[id - 1].quantidade > 0) {
-    produtos_mari.value[id - 1].quantidade--
+  if (leninprodutos.value[id - 1].quantidade > 0) {
+    leninprodutos.value[id - 1].quantidade--
   }
 }
 
 function adicionar1(id) {
-  if (produtos_mari.value[id - 1].quantidade > 0) {
+  if (leninprodutos.value[id - 1].quantidade > 0) {
     carrinho.value.itens.push({
-      ...produtos_mari.value[id - 1],
-      preco: produtos_mari.value[id - 1].quantidade * produtos_mari.value[id - 1].preco
+      ...leninprodutos.value[id - 1],
+      preco: leninprodutos.value[id - 1].quantidade * leninprodutos.value[id - 1].preco
     })
 
     calcularTotal()
   }
 }
 function resetar1(id) {
-if (produtos_mari.value[id - 1].quantidade > 0) {
-  produtos_mari.value[id - 1].quantidade = 0 }
+if (leninprodutos.value[id - 1].quantidade > 0) {
+  leninprodutos.value[id - 1].quantidade = 0 }
 }
-const produtos_bt = ref([
+const ursalprodutos = ref([
   {
     id: 1,
-    nome: 'Base BT Skin',
-    preco: 70.0,
+    nome: 'Moletom–URSAL',
+    preco: 100.0,
     quantidade: 0,
-    imagem: 'https://d225afdvrjsxie.cloudfront.net/Custom/Content/Products/72/84/72846_base-liquida-bruna-tavares-bt-skin-l40_m1_637720528611787019.jpg'
+    imagem: 'https://queissocamarada.com/loja/wp-content/webp-express/webp-images/uploads/2018/08/moletom-branco-ursal-costas.jpg.webp'
   },
   {
     id: 2,
-    nome: 'Iluminador - BT Mirror',
-    preco: 65.0,
+    nome: 'Pin Ursal',
+    preco: 25.0,
     quantidade: 0,
-    imagem: 'https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwe82f3b03/images/Color%20BR/BT/7896032669383_4_1000px.jpg?sw=556&sh=680&sm=fit'
+    imagem: 'https://cf.shopee.com.br/file/272eaab2041b706d99c5fd8bb96e9b38'
   },
   {
     id: 3,
-    nome: 'BT Elixir Facial Acqua Hydra',
-    preco: 60.0,
+    nome: 'Poster – URSAL',
+    preco: 15.0,
     quantidade: 0,
-    imagem: 'https://epocacosmeticos.vteximg.com.br/arquivos/ids/429712-320-320/elixir-facial-bt-acqua-hydra--2-.jpg?v=637548140957470000'
+    imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2018/11/Poster_Ursal.png'
   }
 ])
 function incrementar2(id) {
-  console.log(produtos_bt.value[id])
-  produtos_bt.value[id - 1].quantidade++
+  console.log(ursalprodutos.value[id])
+  ursalprodutos.value[id - 1].quantidade++
 }
 function decrementar2(id) {
-  if (produtos_bt.value[id - 1].quantidade > 0) {
-    produtos_bt.value[id - 1].quantidade--
+  if (ursalprodutos.value[id - 1].quantidade > 0) {
+    ursalprodutos.value[id - 1].quantidade--
   }
 }
 
 function adicionar2(id) {
-  if (produtos_bt.value[id - 1].quantidade > 0) {
+  if (ursalprodutos.value[id - 1].quantidade > 0) {
     carrinho.value.itens.push({
-      ...produtos_bt.value[id - 1],
-      preco: produtos_bt.value[id - 1].quantidade * produtos_bt.value[id - 1].preco
+      ...ursalprodutos.value[id - 1],
+      preco: ursalprodutos.value[id - 1].quantidade * ursalprodutos.value[id - 1].preco
     })
 
     calcularTotal()
   }
 }
 function resetar2(id) {
-if (produtos_bt.value[id - 1].quantidade > 0) {
-  produtos_bt.value[id - 1].quantidade = 0 }
+if (ursalprodutos.value[id - 1].quantidade > 0) {
+  ursalprodutos.value[id - 1].quantidade = 0 }
 }
-const produtos_fran = ref([
+const marxprodutos = ref([
   {
     id: 1,
-    nome: 'Gloss Labial Pink Chilli',
-    preco: 49.9,
+    nome: 'Estátua – Karl Marx 3D',
+    preco: 200.0,
     quantidade: 0,
-    imagem: 'https://www.atacadaodasmaquiagens.com.br/media/catalog/product/cache/1/image/420x420/9df78eab33525d08d6e5fb8d27136e95/g/l/gloss_aumenta_volume_gloss_hidratante_gloss_fran_gloss_aumento_volume_l_bios_fran_by_franciny_ehlke_pink_chilli_-_atacad_o_das_maquiagens_4_.png'
+    imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2022/01/Marx-M.jpg'
   },
   {
     id: 2,
-    nome: 'Stick Balms By Fran',
-    preco: 39.9,
+    nome: 'Moletom com capuz – Karl Marx',
+    preco: 159.9,
     quantidade: 0,
-    imagem: 'https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwe373a572/images/Color%20BR/FRAN/balm/7898969501903-0_1000px.jpg?sw=400&sh=400&sm=fit'
+    imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2018/10/moletom-branco-marx-1.jpg'
   },
   {
     id: 3,
-    nome: 'Máscara Para Cílios Fran Maravicherry',
+    nome: 'Body para bebê – Karl Marx',
     preco: 55.0,
     quantidade: 0,
-    imagem: 'https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dw78571ce4/images/Color%20BR/FRAN/7898969501002_1_1000px.jpg?sw=400&sh=400&sm=fit'
+    imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2021/10/Body-verao-Marx-Vermelo.jpg'
   }
 ])
 function incrementar3(id) {
-  console.log(produtos_fran.value[id])
-  produtos_fran.value[id - 1].quantidade++
+  console.log(marxprodutos.value[id])
+  marxprodutos.value[id - 1].quantidade++
 }
 function decrementar3(id) {
-  if (produtos_fran.value[id - 1].quantidade > 0) {
-    produtos_fran.value[id - 1].quantidade--
+  if (marxprodutos.value[id - 1].quantidade > 0) {
+    marxprodutos.value[id - 1].quantidade--
   }
 }
 
 function adicionar3(id) {
-  if (produtos_fran.value[id - 1].quantidade > 0) {
+  if (marxprodutos.value[id - 1].quantidade > 0) {
     carrinho.value.itens.push({
-      ...produtos_fran.value[id - 1],
-      preco: produtos_fran.value[id - 1].quantidade * produtos_fran.value[id - 1].preco
+      ...marxprodutos.value[id - 1],
+      preco: marxprodutos.value[id - 1].quantidade * marxprodutos.value[id - 1].preco
     })
 
     calcularTotal()
   }
 }
 function resetar3(id) {
-  if (produtos_fran.value[id - 1].quantidade > 0) {
-    produtos_fran.value[id - 1].quantidade = 0 }
+  if (marxprodutos.value[id - 1].quantidade > 0) {
+    marxprodutos.value[id - 1].quantidade = 0 }
 }
-const produtos_bocaRosa = ref([
+const porcosprodutos = ref([
   {
     id: 1,
-    nome: 'Pó Boca Rosa Beauty',
+    nome: 'Camiseta–Donald Trump Porco Fascista',
     preco: 49.9,
     quantidade: 0,
-    imagem: 'https://www.dailymakeup.com.br/uploads/product_file/BIG98730b5ce4d9423ae4163b6440dc6955.jpg'
+    imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2020/01/camiseta-branca-trump.jpg'
   },
   {
     id: 2,
-    nome: 'Corretivo Líquido - Boca Rosa',
+    nome: 'Poster – Tribunal de Haia , Fora Bolsonaro',
     preco: 40.0,
     quantidade: 0,
-    imagem: 'https://cdn.awsli.com.br/2500x2500/1813/1813898/produto/87526337/210992df05.jpg'
+    imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2021/07/Tribunal-de-Haia-_Poster.jpg'
   },
   {
     id: 3,
-    nome: 'Boca Rosa by Payot Tint',
+    nome: 'Camiseta – Ele não, Ele nunca ',
     preco: 39.9,
     quantidade: 0,
-    imagem: 'https://payottatix.vteximg.com.br/arquivos/ids/157488-1000-1000/7896609543818-1.jpg?v=637831460192770000'
+    imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2019/11/camiseta-ele-nao-vermelha-basica.jpg'
   }
 ])
 function incrementar4(id) {
-  console.log(produtos_bocaRosa.value[id])
-  produtos_bocaRosa.value[id - 1].quantidade++
+  console.log(porcosprodutos.value[id])
+  porcosprodutos.value[id - 1].quantidade++
 }
 function decrementar4(id) {
-  if (produtos_bocaRosa.value[id - 1].quantidade > 0) {
-    produtos_bocaRosa.value[id - 1].quantidade--
+  if (porcosprodutos.value[id - 1].quantidade > 0) {
+    porcosprodutos.value[id - 1].quantidade--
   }
 }
 
@@ -184,18 +185,18 @@ function calcularTotal() {
 }
 
 function adicionar4(id) {
-  if (produtos_bocaRosa.value[id - 1].quantidade > 0) {
+  if (porcosprodutos.value[id - 1].quantidade > 0) {
     carrinho.value.itens.push({
-      ...produtos_bocaRosa.value[id - 1],
-      preco: produtos_bocaRosa.value[id - 1].quantidade * produtos_bocaRosa.value[id - 1].preco
+      ...porcosprodutos.value[id - 1],
+      preco: porcosprodutos.value[id - 1].quantidade * porcosprodutos.value[id - 1].preco
     })
 
     calcularTotal()
   }
 }
 function resetar4(id) {
-  if (produtos_bocaRosa.value[id - 1].quantidade > 0) {
-    produtos_bocaRosa.value[id - 1].quantidade = 0 }
+  if (porcosprodutos.value[id - 1].quantidade > 0) {
+    porcosprodutos.value[id - 1].quantidade = 0 }
 }
 const carrinho = ref({
   itens: [],
@@ -217,20 +218,20 @@ function remover(id){
     <h1>Communis Store</h1>
     
     <div>
-      <button class="btn-carrinho"  @click="mostrar = true"><a href="#carrinho">Carrinho</a></button>
+      
     </div>
     <hr>
     <div id="produtos">
-      <div id="produtos-Mari">
-        <h2>Marimaria MakeUp</h2>
+      <div id="leninprodutos">
+        <h2>Lênin</h2>
         <div class="marcas">
-          <div v-for="(produto, index) in produtos_mari" :key="index" class="produto">
+          <div v-for="(produto, index) in leninprodutos" :key="index" class="produto">
             <h4>{{ produto.nome }}</h4>
             <img :src="produto.imagem" alt="" width="200" />
             <div class="informacoes">
               <h3>R${{ produto.preco.toFixed(2) }}</h3>
               <button class="btn-adicionar" @click="incrementar1(produto.id)">+</button>
-              <img src="https://cdn-icons-png.flaticon.com/256/3299/3299937.png" alt="" width="25" class="btn-deletar" @click="resetar1(produto.id)" />
+              <img src="" alt="" width="25" class="btn-deletar" @click="resetar1(produto.id)" />
               <button class="btn-decrmentar" @click="decrementar1(produto.id)">-</button>
               <p>Quantidade de produto(s): {{ produto.quantidade }}</p>
               <button class="btn-adicionar" @click="adicionar1(produto.id)">Adicionar ao Carrinho</button>
@@ -239,10 +240,10 @@ function remover(id){
         </div>
       </div>
       <hr />
-      <div id="produtos-BT">
-        <h2>Bruna Tavares</h2>
+      <div id="ursalprodutos">
+        <h2>URSAL</h2>
         <div class="marcas">
-          <div v-for="(produto, index) in produtos_bt" :key="index" class="produto">
+          <div v-for="(produto, index) in ursalprodutos" :key="index" class="produto">
             <h4>{{ produto.nome }}</h4>
             <img :src="produto.imagem" alt="" width="200" />
             <div class="informacoes">
@@ -258,9 +259,9 @@ function remover(id){
       </div>
       <hr />
       <div id="produtos-Fran">
-        <h2>Fran</h2>
+        <h2>Karl Marx</h2>
         <div class="marcas">
-          <div v-for="(produto, index) in produtos_fran" :key="index" class="produto">
+          <div v-for="(produto, index) in marxprodutos" :key="index" class="produto">
             <h4>{{ produto.nome }}</h4>
             <img :src="produto.imagem" alt="" width="200" />
             <div class="informacoes">
@@ -276,9 +277,9 @@ function remover(id){
       </div>
       <hr />
       <div id="produtos-bocaRosa">
-        <h2>Boca Rosa Beauty</h2>
+        <h2>Porcos</h2>
         <div class="marcas">
-          <div v-for="(produto, index) in produtos_bocaRosa" :key="index" class="produto">
+          <div v-for="(produto, index) in porcosprodutos" :key="index" class="produto">
             <h4>{{ produto.nome }}</h4>
             <img :src="produto.imagem" alt="" width="200" />
             <div class="informacoes">
@@ -294,7 +295,9 @@ function remover(id){
       </div>
       <hr>
     </div>
-
+    <div>
+      <button class="btn-carrinho"  @click="mostrar = true"><a href="#carrinho"></a>Carrinho</button>
+    </div>
     <div id="carrinho" v-if="mostrar">
      <h2>Carrinho de Compras </h2>
      <button @click="mostrar = false" class="btn-ocultar">Ocultar</button>
@@ -319,28 +322,25 @@ function remover(id){
 }
 
 .produto {
-  margin: 25px;
+  margin: 35px;
 }
 
 h1 {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: rgb(255, 0, 0);
-  
   font-size: 50px;
 }
 h2 {
   text-align: left;
   color: rgb(255, 0, 0);
   margin: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 p {
   color: rgb(97, 4, 40);
 }
-img {
-  border-radius: 50%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
-}
+
 img > .btn-deletar {
   box-shadow: none;
 }
@@ -375,7 +375,10 @@ hr {
   bottom: 0%;
 }
 .btn-carrinho{
-  font-size:25px;
+  font-size:35px;
+  background-color: firebrick;
+  
+  
 }
 .marcas > img{
   position: absolute;
@@ -392,15 +395,16 @@ hr {
 .total{
   border-radius: 10px;
   font-size: 25px;
+  color: rgb(242, 237, 237);
   
 }
 .btn-ocultar{
   font-size: 15px;
 }
 a{
-  color: rgb(255, 255, 255);
+  color: rgb(254, 254, 254);
 }
 p{
-  color: azure;
+  color: rgb(235, 213, 213);
 }
 </style>
