@@ -165,6 +165,7 @@ const porcosprodutos = ref([
     quantidade: 0,
     imagem: 'https://queissocamarada.com/loja/wp-content/uploads/2019/11/camiseta-ele-nao-vermelha-basica.jpg'
   }
+  
 ])
 function incrementar4(id) {
   console.log(porcosprodutos.value[id])
@@ -407,4 +408,103 @@ a{
 p{
   color: rgb(235, 213, 213);
 }
+.lojacompleta{
+  text-align: center;
+}
+@media screen and (max-width: 1020px) {
+  .marcas {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: row;
+  height: 450px;
+}
+
+.produto {
+  margin: 35px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(255, 0, 0);
+  font-size: 50px;
+}
+h2 {
+  text-align: left;
+  color: rgb(255, 0, 0);
+  margin: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p {
+  color: rgb(97, 4, 40);
+}
+
+img > .btn-deletar {
+  box-shadow: none;
+}
+h4 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+h3 {
+  text-shadow: 5px 5px 10px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+button {
+  color: white;
+  background-color: rgb(158, 0, 0);
+  border-color: rgb(255, 0, 0);
+  border-style: double;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rgb(227, 0, 0);
+  box-shadow: 2px 2px 5px rgba(196, 1, 1, 0.473);
+}
+hr {
+  border-style: solid;
+  color: rgb(157, 36, 36);
+  margin: 10px;
+}
+.informacoes{
+  position: absolute;
+  bottom: 0%;
+}
+.btn-carrinho{
+  font-size:35px;
+  background-color: firebrick;
+  
+  
+}
+.marcas > img{
+  position: absolute;
+  bottom: 0%;
+}
+#carrinho>h2{
+  color: rgb(255, 0, 0);
+ 
+}
+#carrinho{
+  text-align: left;
+  font-size: 20px;
+}
+.total{
+  border-radius: 10px;
+  font-size: 25px;
+  color: rgb(242, 237, 237);
+  
+}
+.btn-ocultar{
+  font-size: 15px;
+}
+a{
+  color: rgb(254, 254, 254);
+}
+p{
+  color: rgb(219, 219, 219);
+}
+          }
 </style>
